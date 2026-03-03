@@ -14,11 +14,17 @@ ProductManagement/
 │   └── product-overview.md        # 📋 [产品规格总览](product-overview.md)
 ├── specs/                         # 📁 功能规格文档
 │   └── 001-product-management/    # [产品管理系统功能规格](../specs/001-product-management/spec.md)
+│       ├── spec.md                # 功能规格文档
+│       └── checklists/            # 质量检查清单
 ├── .specify/                      # ⚙️ speckit工作流配置
 │   ├── memory/                    # 📚 项目记忆和模板
+│   │   ├── constitution.md        # 项目章程
+│   │   └── specification.md      # 原产品规格(已迁移)
 │   ├── scripts/                   # 🔧 自动化脚本
 │   └── templates/                 # 📄 文档模板
-└── .windsurf/workflows/           # 🔄 speckit工作流定义
+├── .windsurf/                     # 🔄 IDE工作流配置
+│   └── workflows/                 # speckit工作流定义
+└── .git/                          # 📦 Git版本控制
 ```
 
 ## 快速导航
