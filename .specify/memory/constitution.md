@@ -1,50 +1,74 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+# ProductManagement 章程
 
-## Core Principles
+## 1. 核心原则
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### 1.1 用户价值优先
+每个功能必须以用户价值为核心，专注于解决实际业务问题。功能设计必须基于真实用户场景，避免技术驱动开发。所有决策必须以提升用户体验和业务效率为最终目标。
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+### 1.2 数据驱动决策
+所有产品决策必须基于数据分析。建立完善的数据收集和分析机制，确保功能迭代有数据支撑。关键指标必须可量化、可追踪，并定期评估效果。
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### 1.3 质量不可妥协
+代码质量是产品生命线。强制执行代码审查、自动化测试和持续集成。任何代码合并前必须通过完整测试套件，确保系统稳定性和可靠性。
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+### 1.4 安全与隐私保护
+用户数据安全和隐私保护是最高优先级。所有数据处理必须遵循最小权限原则，实施端到端加密，定期进行安全审计和漏洞扫描。
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+### 1.5 渐进式演进
+产品发展采用渐进式演进策略。优先核心功能MVP，基于用户反馈持续迭代。避免过度设计，保持架构灵活性和可扩展性。
 
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
+## 2. 附加约束
 
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
+### 2.1 质量标准
+- **清晰性优先**: 代码应当自解释，复杂逻辑必须有详细注释
+- **测试驱动**: 核心功能必须单元测试覆盖，关键路径集成测试
+- **重构优先**: 发现代码坏味道立即重构，不积累技术债务
 
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
+### 2.2 架构原则
+- **模块化设计**: 功能模块清晰分离，低耦合高内聚
+- **接口优先**: 先定义接口，再实现功能
+- **数据驱动**: 以数据流为核心，避免状态混乱
 
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+### 2.3 版本控制
+- **频繁提交**: 小步提交，便于多设备同步和回滚
+- **清晰信息**: 提交信息明确描述变更内容
+- **分支策略**: 功能开发使用独立分支，完成后合并
 
-## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
+### 2.4 文档管理
+- **实时同步**: 文档与代码同步更新，同步提交
+- **结构清晰**: 增量的具体文档和整体的框架性文档边界清晰，紧密关联
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
+### 2.5 测试门禁
+- 单元测试覆盖率：> 80%
+- 集成测试：关键路径100%覆盖
+- 性能测试：每个版本发布前
+- 安全测试：自动化扫描 + 手工审查
 
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+### 2.6 部署审批流程
+- 开发环境 → 测试环境 → 预生产环境 → 生产环境
+- 每个环境升级需要相应团队确认
+- 生产部署需要产品负责人最终批准
+
+## 3. 用户体验原则
+
+### 3.1 设计理念
+- **移动优先**: 核心功能在移动端体验最佳
+- **响应式设计**: 适配桌面、平板、手机多设备
+- **流畅体验**: 追求极致的用户交互体验
+- **无障碍访问**: 遵循 WCAG 2.1 AA 标准，能通过WAVE检查
+
+## 4. 安全与隐私原则
+
+### 4.1 数据隐私
+- **用户数据主权**: 用户完全拥有其数据，支持完整导出
+- **最小化收集**: 只收集必要数据，明确告知用途
+- **加密存储**: 关键数据必须加密保存
+
+### 4.2 应用安全  
+- **输入验证**: 所有用户输入必须严格验证
+- **权限控制**: 功能访问基于最小权限原则
+- **安全审计**: 定期进行安全检查和漏洞扫描
+
+所有代码审查和设计决策必须验证章程合规性。任何复杂性增加必须有充分理由。开发过程中遇到原则冲突时，参考本章程或寻求技术委员会指导。
+
+**版本**：1.0.2 | **批准**：2026-03-03 | **最后修订**：2026-03-03
