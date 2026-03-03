@@ -1,94 +1,93 @@
 # 产品管理系统
 
-## 产品概述
+## 项目介绍
 
-产品管理系统是一个全面的产品生命周期管理平台，旨在帮助团队高效管理产品信息、跟踪需求进展、监控项目进度，并通过数据分析驱动决策。
+这是一个全面的产品生命周期管理平台，旨在帮助团队高效管理产品信息、跟踪需求进展、监控项目进度，并通过数据分析驱动决策。
 
-### 目标用户
-- **产品经理**：负责产品规划、需求管理、进度跟踪
-- **项目经理**：负责项目执行、资源协调、进度监控
-- **开发团队**：参与需求实现、进度更新
-- **管理层**：通过数据分析进行战略决策
+## 项目结构
 
-### 核心价值
-- **统一管理**：集中管理产品、需求、项目信息
-- **实时跟踪**：实时监控进度，及时发现问题
-- **数据驱动**：通过可视化分析支持决策
-- **协同高效**：提升团队协作效率
+```
+ProductManagement/
+├── docs/                          # 📁 产品级文档
+│   ├── README.md                  # 本文件 - 项目导航
+│   ├── architecture.md            # 🏗️ [技术架构设计](architecture.md)
+│   └── product-overview.md        # 📋 [产品规格总览](product-overview.md)
+├── specs/                         # 📁 功能规格文档
+│   └── 001-product-management/    # [产品管理系统功能规格](../specs/001-product-management/spec.md)
+├── .specify/                      # ⚙️ speckit工作流配置
+│   ├── memory/                    # 📚 项目记忆和模板
+│   ├── scripts/                   # 🔧 自动化脚本
+│   └── templates/                 # 📄 文档模板
+└── .windsurf/workflows/           # 🔄 speckit工作流定义
+```
 
-## 核心功能模块
+## 快速导航
 
-### 1. 产品信息管理
-- 产品基本信息维护
-- 产品状态跟踪
-- 产品负责人管理
+### 📖 产品文档
+- **[产品概述](product-overview.md)** - 产品级需求规格和核心功能
+- **[技术架构](architecture.md)** - 系统架构设计和技术选型
 
-### 2. 需求跟踪管理
-- 需求完整生命周期管理
-- 需求状态变更跟踪
-- 需求与项目关联
+### 📝 功能规格
+- **[产品管理系统](../specs/001-product-management/spec.md)** - 具体功能实现规格
+- **[质量检查清单](../specs/001-product-management/checklists/requirements.md)** - 规格质量验证
 
-### 3. 项目进度监控
-- 项目进度实时更新
-- 里程碑管理
-- 资源分配监控
+### ⚙️ 开发工具
+- **[speckit工作流](../.windsurf/workflows/)** - 规范化开发流程
+  - [`/speckit.specify`](../.windsurf/workflows/speckit.specify.md) - 创建功能规格
+  - [`/speckit.clarify`](../.windsurf/workflows/speckit.clarify.md) - 澄清需求细节
+  - [`/speckit.plan`](../.windsurf/workflows/speckit.plan.md) - 设计技术方案
+  - [`/speckit.tasks`](../.windsurf/workflows/speckit.tasks.md) - 分解开发任务
 
-### 4. 数据分析和可视化
-- 多维度数据分析
-- 可视化报表
-- 趋势分析
+## 开发状态
 
-## 功能规格文档
+| 模块 | 状态 | 文档 |
+|------|------|------|
+| 产品信息管理 | 🟡 规格中 | [spec.md](../specs/001-product-management/spec.md) |
+| 需求跟踪管理 | 🟡 规格中 | [spec.md](../specs/001-product-management/spec.md) |
+| 项目进度监控 | 🟡 规格中 | [spec.md](../specs/001-product-management/spec.md) |
+| 数据分析可视化 | 🟡 规格中 | [spec.md](../specs/001-product-management/spec.md) |
 
-| 功能模块 | 规格文档 | 状态 |
-|---------|---------|------|
-| 产品管理系统 | [specs/001-product-management/spec.md](../specs/001-product-management/spec.md) | 草稿 |
+## 开发指南
 
-## 技术架构概览
+### 1. 新功能开发
+```bash
+# 创建新功能规格
+/speckit.specify "功能描述"
 
-系统采用模块化设计，各功能模块相对独立，支持：
-- 微服务架构演进
-- 数据库分离
-- 前后端分离
-- API优先设计
+# 澄清需求细节
+/speckit.clarify
 
-## 开发路线图
+# 设计技术方案
+/speckit.plan
 
-### 第一阶段 (MVP)
-- [x] 产品信息管理基础功能
-- [x] 需求跟踪核心功能
-- [ ] 项目进度基础监控
+# 分解开发任务
+/speckit.tasks
+```
 
-### 第二阶段
-- [ ] 数据分析和可视化
-- [ ] 高级权限管理
-- [ ] 数据导入导出
+### 2. 文档维护
+- 产品级文档更新：直接编辑 `docs/` 目录下的文件
+- 功能规格更新：通过 speckit 工作流
+- 提交前确保所有文档同步更新
 
-### 第三阶段
-- [ ] 移动端支持
-- [ ] 第三方系统集成
-- [ ] 高级分析功能
+### 3. 质量保证
+- 每个功能规格都有对应的[质量检查清单](../specs/001-product-management/checklists/requirements.md)
+- 代码提交前必须通过完整测试
+- 文档与代码保持同步
 
-## 文档导航
+## 项目信息
 
-- [产品架构设计](architecture.md)
-- [用户使用指南](user-guide.md)
-- [API文档](api/) (开发中)
-- [部署指南](deployment.md) (计划中)
+- **维护者**: MK
+- **开始时间**: 2026-03-03
+- **开发框架**: speckit规范化开发流程
+- **代码仓库**: [GitHub](https://github.com/MK840405/ProductManagement)
 
-## 贡献指南
+## 相关链接
 
-1. 所有功能开发遵循 [speckit 流程](../.windsurf/workflows/)
-2. 代码提交前必须通过完整测试
-3. 文档与代码同步更新
-
-## 联系方式
-
-- 项目维护者：MK
-- 问题反馈：[GitHub Issues](https://github.com/MK840405/ProductManagement/issues)
-- 文档更新：查看 [贡献历史](https://github.com/MK840405/ProductManagement/commits/main)
+- [项目章程](../.specify/memory/constitution.md) - 开发原则和规范
+- [GitHub Issues](https://github.com/MK840405/ProductManagement/issues) - 问题反馈
+- [提交历史](https://github.com/MK840405/ProductManagement/commits/main) - 开发记录
 
 ---
 
 **最后更新**: 2026-03-03  
-**版本**: v1.0.0
+**文档版本**: v1.0
