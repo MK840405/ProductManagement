@@ -10,16 +10,15 @@
 ProductManagement/
 ├── docs/                          # 📁 产品级文档
 │   ├── README.md                  # 本文件 - 项目导航
-│   ├── architecture.md            # 🏗️ [技术架构设计](architecture.md)
-│   └── product-overview.md        # 📋 [产品规格总览](product-overview.md)
+│   ├── architecture.md            # 🏗️ [技术架构设计]
+│   └── product-overview.md        # 📋 [产品规格总览]
 ├── specs/                         # 📁 功能规格文档
-│   └── 001-product-management/    # [产品管理系统功能规格](../specs/001-product-management/spec.md)
+│   └── 001-product-management/    # [产品管理系统功能规格]
 │       ├── spec.md                # 功能规格文档
 │       └── checklists/            # 质量检查清单
 ├── .specify/                      # ⚙️ speckit工作流配置
 │   ├── memory/                    # 📚 项目记忆和模板
 │   │   ├── constitution.md        # 项目章程
-│   │   └── specification.md      # 原产品规格(已迁移)
 │   ├── scripts/                   # 🔧 自动化脚本
 │   └── templates/                 # 📄 文档模板
 ├── .windsurf/                     # 🔄 IDE工作流配置
