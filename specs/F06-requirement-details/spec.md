@@ -1,6 +1,6 @@
 # Feature Specification: 需求详情管理
 
-**Feature Branch**: `002-requirement-details`  
+**Feature Branch**: `F06-requirement-details`  
 **Created**: 2026-03-04  
 **Status**: Draft  
 **Input**: User description: "需求详情管理功能，支持需求详情展示、里程碑节点跟踪，包括需求基本信息、关联项目和产品信息、负责人信息、时间节点跟踪、状态变更历史等功能"
